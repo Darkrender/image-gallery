@@ -1,6 +1,11 @@
 ## Instructions
 
-To run the project, first clone the repository locally and then:
+To run the project, first clone the repository locally:
+1. Open your terminal and navigate to the directory where you want to store the project
+2. Run command: `git clone https://github.com/Darkrender/image-gallery.git`
+3. Navigate into the project directory
+
+Next:
 1. Run `npm install` to install all dependencies
 2. Run `npm start` to open the app in development mode
 
