@@ -1,11 +1,15 @@
 import React, { useState } from 'react'
 import './gallery.styles.scss'
 import useImageSearch from '../../hooks/useImageSearch'
+import useInfiniteScrollObserver from '../../hooks/useInfiniteScrollObserver'
 import { SRLWrapper } from 'simple-react-lightbox'
 
 const Gallery = () => {
-  const [pageNumber] = useState(1)
+  const [pageNumber, setPageNumber] = useState(1)
   const { images, loading, error } = useImageSearch(pageNumber)
+  const { infiniteScrollElementRef } = useInfiniteScrollObserver(loading, () =>
+    setPageNumber(prevPageNumber => prevPageNumber + 1)
+  )
 
   return (
     <div className="gallery">
@@ -14,6 +18,16 @@ const Gallery = () => {
       <SRLWrapper>
         <div className="images">
           {images.map((item, index) => {
+            if (images.length === index + 1) {
+              return (
+                <img
+                  ref={infiniteScrollElementRef}
+                  key={index}
+                  src={item.urls.regular}
+                  alt={item.description}
+                />
+              )
+            }
             return (
               <img key={index} src={item.urls.regular} alt={item.description} />
             )
