@@ -24,7 +24,7 @@ const Gallery = () => {
                   ref={infiniteScrollElementRef}
                   key={index}
                   src={item.urls.regular}
-                  alt={item.description}
+                  alt={item.description || item.alt_description}
                 />
               )
             }
