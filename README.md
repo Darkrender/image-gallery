@@ -1,5 +1,5 @@
 ## Description
-A small image gallery application featuring infinite scrolling and a full-screen carousel utilizing the Unsplash API and React Hooks
+A coding challenge to create a small image gallery application featuring infinite scrolling and a full-screen carousel utilizing the Unsplash API and React Hooks
 
 ## Instructions
 
