@@ -1,4 +1,4 @@
-## Image Gallery
+## Description
 A small image gallery application featuring infinite scrolling and a full-screen carousel utilizing the Unsplash API
 
 ## Instructions
