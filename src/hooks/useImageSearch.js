@@ -7,10 +7,7 @@ export default function useImageSearch(pageNumber = 1, photosPerPage = 25) {
   const [images, setImages] = useState([])
 
   useEffect(() => {
-    // I would never have this access key hardcoded or pushed up to a real repository
-    // Instead I would probably get this from the server or from an environment variable
-    // Just doing this for expediency for this specific coding challenge
-    const accessKey = 'lggn9MK0hE4N9rqhHDChkI54JkkYz_ojdaEhz3iE-tY'
+    const accessKey = '{replace this with your access key}'
     let cancel
 
     setLoading(true)
